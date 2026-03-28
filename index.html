@@ -34,16 +34,20 @@
     </div>
 
     <script>
-        window.addEventListener("load", () => {
-          const root = document.documentElement;
-      
-          const x = (root.scrollWidth - window.innerWidth) / 2;
-          const y = (root.scrollHeight - window.innerHeight) / 2;
-      
-          window.scrollTo(x, y);
-        });
-      </script>
-      
+  window.addEventListener("load", () => {
+    const root = document.documentElement;
+
+    const left = (root.scrollWidth - window.innerWidth) / 2;
+    const top  = (root.scrollHeight - window.innerHeight) / 2;
+
+    window.scrollTo({
+      left: Math.max(0, left),
+      top: Math.max(0, top),
+      behavior: "auto"
+    });
+  });
+</script>
+
 </body>
 
 
