@@ -6,12 +6,20 @@
     <title>Sacret Emily</title>
 </head>
 <style>
-    body {
-        height: 300vh;
+    html, body {
+        height: 350vh;
         aspect-ratio: 3510 / 2532;
         margin: 0;
         padding: 0;
+        background-color: 130,151,78  ;
+        overscroll-behavior: none;
 
+    }
+
+    @media (max-width: 768px) {
+        body {
+            height: 210vh;
+        }
     }
 
     .content {
@@ -25,17 +33,7 @@
         object-fit: cover;
     }
 
-    @media (orientation: portrait) {
-  #canvas {
-    transform: scale(1.5);
-  }
-}
-
-@media (orientation: landscape) {
-  #canvas {
-    transform: scale(1);
-  }
-}
+   
 
 </style>
 
@@ -44,6 +42,8 @@
     <div class="content">
         <img src="Sacret Emily.svg" alt="">
     </div>
+
+
 
     <script>
   window.addEventListener("load", () => {
