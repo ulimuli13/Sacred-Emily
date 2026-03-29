@@ -25,6 +25,18 @@
         object-fit: cover;
     }
 
+    @media (orientation: portrait) {
+  #canvas {
+    transform: scale(1.5);
+  }
+}
+
+@media (orientation: landscape) {
+  #canvas {
+    transform: scale(1);
+  }
+}
+
 </style>
 
 
